@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh 'ssh dep-server "source pollingenv/bin/activate; \
+                sh 'ssh vagrant@dep-server "source pollingenv/bin/activate; \
 				cd polling; \
 				git pull origin main; \
 				pip install -r requirements.txt; \
